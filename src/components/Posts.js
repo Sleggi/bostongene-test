@@ -1,11 +1,19 @@
 import React from 'react'
 
-function Posts({ posts }) {
+function Posts({ posts, setPosts }) {
+
+    // Удаляем посты по id 
+    const handleDelete = (id) => {
+        setPosts(posts.filter(i => i.id !== id))
+    }
+
+
     return (
         <div className='posts'>
-            {
-                posts.map((post, index) => (
-                    <div className='posts__post post' key={index}>
+            { // Мапим по постам, возвращаем div для каждого поста
+                posts.map((post) => (
+                    <div className='posts__post post' key={post.id}>
+                        <button onClick={(e) => handleDelete(post.id)}>Удалить</button>
                         <p className="post__heading">{post.heading}</p>
                         <p className="post__post">{post.post}</p>
                         <p className="post__phone">{post.phone}</p>

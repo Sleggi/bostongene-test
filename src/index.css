@@ -13,23 +13,28 @@ body {
   display: flex;
 }
 
-.form {
+.flex-center {
   display: flex;
-  width: 50%;
   flex-direction: column;
   align-items: center;
-  background-color: lightcoral;
 }
 
-.form__textarea {
+.form {
+  width: 50%;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  text-align: center;
+}
+
+
+.form__btn {
+  margin-left: auto;
 }
 
 .posts {
   width: 50%;
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
 }
@@ -42,5 +47,3 @@ body {
   border-radius: 5px;
 
 }
-
-.post__heading {}
